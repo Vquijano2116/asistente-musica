@@ -1,0 +1,7 @@
+La teoría musical es el estudio de las prácticas y posibilidades de la música. Incluye el análisis de los elementos fundamentales como la melodía, la armonía, el ritmo, el timbre y la forma musical.
+
+Las notas musicales son: Do, Re, Mi, Fa, Sol, La y Si (en el sistema latino) o C, D, E, F, G, A y B (en el sistema anglosajón). Una escala musical es una sucesión ordenada de notas. La escala mayor tiene una sonoridad alegre mientras que la escala menor suena más melancólica.
+
+Los acordes son combinaciones de tres o más notas tocadas simultáneamente. Un acorde mayor está compuesto por la tónica, la tercera mayor y la quinta justa. El compás organiza el ritmo en unidades regulares: el 4/4 es el más común en la música pop y rock.
+
+La lectura musical se realiza en un pentagrama, que tiene cinco líneas horizontales donde se colocan las notas. La clave de Sol indica que la nota Sol está en la segunda línea del pentagrama. El tempo indica la velocidad de la música y se mide en BPM (pulsaciones por minuto). Un tempo de 120 BPM es moderado, 60 BPM es lento y 180 BPM es muy rápido.

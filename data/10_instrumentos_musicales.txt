@@ -1,0 +1,7 @@
+Los instrumentos musicales son objetos construidos para producir sonidos musicales. Se clasifican en varias familias según cómo producen el sonido: cordófonos, aerófonos, membranófonos, idiófonos y electrófonos.
+
+Los cordófonos producen sonido mediante la vibración de cuerdas. Incluyen la guitarra, el violín, el piano, el arpa y el bajo eléctrico. La guitarra es el instrumento más popular del mundo con más de 300 millones de guitarristas. El violín es el instrumento principal de las orquestas clásicas.
+
+Los aerófonos producen sonido mediante la vibración del aire. Incluyen la flauta, el saxofón, la trompeta, el trombón y el clarinete. El saxofón fue inventado en 1840 por Adolphe Sax y es fundamental en el jazz. La flauta traversa es uno de los instrumentos más antiguos conocidos.
+
+Los membranófonos producen sonido mediante la vibración de una membrana, como los tambores, la batería y el timbal. Los idiófonos producen sonido por la vibración del propio instrumento, como el xilófono, las maracas y los platillos. Los electrófonos producen sonido electrónicamente, como el sintetizador y el theremin.
