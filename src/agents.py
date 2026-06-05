@@ -43,7 +43,7 @@ def agente_buscador(estado: EstadoAsistente) -> EstadoAsistente:
                 resultado = buscar_artista_musicbrainz(termino)
                 if "nombre" in resultado:
                     info_externa = f"[MusicBrainz] Artista: {resultado['nombre']}, País: {resultado['pais']}, Inicio: {resultado['inicio']}, Géneros: {', '.join(resultado['generos'])}"
-                    print(f"🌐 MCP encontró: {resultado['nombre']}")
+                    print(f" MCP encontró: {resultado['nombre']}")
                     break
         if info_externa:
             break
@@ -55,7 +55,7 @@ def agente_buscador(estado: EstadoAsistente) -> EstadoAsistente:
 
 # Agente 2: Redactor
 def agente_redactor(estado: EstadoAsistente) -> EstadoAsistente:
-    print("✍️ Agente Redactor: generando respuesta...")
+    print(" Agente Redactor: generando respuesta...")
     contexto_completo = estado["documentos_recuperados"]
     if estado.get("info_externa"):
         contexto_completo += f"\n\nInformación adicional de MusicBrainz:\n{estado['info_externa']}"
@@ -89,4 +89,4 @@ def consultar(pregunta: str) -> str:
 
 if __name__ == "__main__":
     respuesta = consultar("¿Quién es Bad Bunny?")
-    print("\n🎵 Respuesta:\n", respuesta)
+    print("\n Respuesta:\n", respuesta)

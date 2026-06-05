@@ -17,8 +17,8 @@ st.markdown("Pregúntame sobre géneros, artistas, historia musical y más.")
 
 # Sidebar con la Skill de reporte
 with st.sidebar:
-    st.header("🛠️ Herramientas")
-    st.subheader("📄 Generar Reporte PDF")
+    st.header(" Herramientas")
+    st.subheader(" Generar Reporte PDF")
     nombre_artista = st.text_input("Nombre del artista:")
     if st.button("Generar PDF"):
         if nombre_artista:
@@ -26,12 +26,12 @@ with st.sidebar:
                 archivo = generar_reporte_artista(nombre_artista)
             with open(archivo, "rb") as f:
                 st.download_button(
-                    label="⬇️ Descargar PDF",
+                    label="⬇ Descargar PDF",
                     data=f,
                     file_name=os.path.basename(archivo),
                     mime="application/pdf"
                 )
-            st.success(f"✅ Reporte de {nombre_artista} listo!")
+            st.success(f" Reporte de {nombre_artista} listo!")
         else:
             st.warning("Escribe el nombre del artista")
 
@@ -42,7 +42,7 @@ if "historial" not in st.session_state:
 pregunta = st.chat_input("Escribe tu pregunta sobre música...")
 
 if pregunta:
-    with st.spinner("🔍 Buscando y redactando respuesta..."):
+    with st.spinner(" Buscando y redactando respuesta..."):
         respuesta = consultar(pregunta)
     st.session_state.historial.append(("user", pregunta))
     st.session_state.historial.append(("assistant", respuesta))
