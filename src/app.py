@@ -9,7 +9,7 @@ from skill_reporte import generar_reporte_artista
 st.set_page_config(
     page_title="Bavafy AI",
     page_icon="🎵",
-    layout="centered"
+    layout="wide"
 )
 
 st.markdown("""
@@ -26,21 +26,6 @@ html, body, [class*="css"] {
     background: linear-gradient(180deg, #1a0a2e 0%, #000000 40%) !important;
 }
 
-/* Header */
-.bavafy-header {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 24px 0 8px 0;
-}
-.bavafy-logo {
-    font-size: 26px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    color: #ffffff;
-}
-
-/* Chat messages */
 .stChatMessage {
     background-color: #1a1a1a !important;
     border-radius: 12px !important;
@@ -52,7 +37,6 @@ html, body, [class*="css"] {
     color: #ffffff !important;
 }
 
-/* Input */
 .stChatInputContainer {
     background-color: #1a1a1a !important;
     border: 1px solid #6b21a8 !important;
@@ -65,17 +49,23 @@ html, body, [class*="css"] {
     border-radius: 24px !important;
 }
 
-/* Sidebar */
-[data-testid="stSidebar"] {
+section[data-testid="stSidebar"] {
     background-color: #0a0a0a !important;
     border-right: 1px solid #1f1f1f !important;
+    width: 300px !important;
+    min-width: 300px !important;
+    transform: translateX(0) !important;
+    visibility: visible !important;
 }
 
-[data-testid="stSidebar"] * {
+section[data-testid="stSidebar"] * {
     color: #ffffff !important;
 }
 
-/* Botones */
+[data-testid="collapsedControl"] {
+    display: none !important;
+}
+
 .stButton > button {
     background-color: #7c3aed !important;
     color: #ffffff !important;
@@ -83,14 +73,12 @@ html, body, [class*="css"] {
     border-radius: 24px !important;
     font-weight: 600 !important;
     padding: 8px 24px !important;
-    transition: background 0.2s !important;
 }
 
 .stButton > button:hover {
     background-color: #6d28d9 !important;
 }
 
-/* Download button */
 .stDownloadButton > button {
     background-color: #1a1a1a !important;
     color: #a855f7 !important;
@@ -99,7 +87,6 @@ html, body, [class*="css"] {
     font-weight: 600 !important;
 }
 
-/* Text input */
 .stTextInput > div > div > input {
     background-color: #1a1a1a !important;
     color: #ffffff !important;
@@ -107,28 +94,24 @@ html, body, [class*="css"] {
     border-radius: 8px !important;
 }
 
-/* Spinner */
 .stSpinner > div {
     border-top-color: #7c3aed !important;
 }
 
-/* Scrollbar */
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: #0a0a0a; }
 ::-webkit-scrollbar-thumb { background: #3a3a3a; border-radius: 3px; }
 
-/* Ocultar elementos de Streamlit */
 #MainMenu, footer, header { visibility: hidden; }
 </style>
 
-<div class="bavafy-header">
+<div style="display:flex;align-items:center;gap:12px;padding:24px 0 8px 0;">
     <span style="font-size:32px">🎵</span>
-    <span class="bavafy-logo">BAVAFY AI</span>
+    <span style="font-size:26px;font-weight:700;letter-spacing:2px;color:#ffffff;">BAVAFY AI</span>
 </div>
-<p style="color:#a0a0a0; margin-bottom:24px;">Tu asistente musical inteligente</p>
+<p style="color:#a0a0a0;margin-bottom:24px;">Tu asistente musical inteligente</p>
 """, unsafe_allow_html=True)
 
-# Sidebar
 with st.sidebar:
     st.markdown("##  Herramientas")
     st.markdown("---")
@@ -145,18 +128,17 @@ with st.sidebar:
                     file_name=os.path.basename(archivo),
                     mime="application/pdf"
                 )
-            st.success(f" Listo!")
+            st.success(" Listo!")
         else:
             st.warning("Escribe el nombre del artista")
 
-# Chat
 if "historial" not in st.session_state:
     st.session_state.historial = []
 
 pregunta = st.chat_input("Pregunta sobre música...")
 
 if pregunta:
-    with st.spinner("🎵 Buscando..."):
+    with st.spinner(" Buscando..."):
         respuesta = consultar(pregunta)
     st.session_state.historial.append(("user", pregunta))
     st.session_state.historial.append(("assistant", respuesta))
